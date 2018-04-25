@@ -115,6 +115,11 @@ class MasterViewController: UITableViewController {
                 controller.detailItem = usuario.value(forKey: "nombre") as? String
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
+            }else {
+                if let split = splitViewController {
+                    let controllers = split.viewControllers
+                    detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? ActivitiesViewController
+                }
             }
         }
     }
@@ -154,6 +159,11 @@ class MasterViewController: UITableViewController {
                 print("Error al borrar al usuario: \(error), \(error.userInfo)")
             }
             self.tableView.reloadData()
+            
+            if self.splitViewController?.viewControllers.count == 2 {
+                self.performSegue(withIdentifier: "showActivities", sender: self)
+            }
+            
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
