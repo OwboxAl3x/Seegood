@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import CoreData
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
-
+    
+    lazy var persistentContainer: NSPersistentContainer = {
+        
+        let container = NSPersistentContainer(name: "Seegood")
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error {
+                
+                fatalError("Unresolved error, \((error as NSError).userInfo)")
+            }
+        })
+        return container
+    }()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.

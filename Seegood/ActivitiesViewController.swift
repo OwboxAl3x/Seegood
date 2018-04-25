@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  ActivitiesViewController.swift
 //  Seegood
 //
 //  Created by Alejandro Garcia Vallecillo on 23/4/18.
@@ -12,6 +12,12 @@ class ActivitiesViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
+    var detailItem: String? {
+        didSet {
+            // Update the view.
+            configureView()
+        }
+    }
 
     func configureView() {
         // Update the user interface for the detail item.
@@ -32,14 +38,6 @@ class ActivitiesViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    var detailItem: NSDate? {
-        didSet {
-            // Update the view.
-            configureView()
-        }
-    }
-
 
 }
 

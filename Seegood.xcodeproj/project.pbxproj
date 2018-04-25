@@ -13,6 +13,7 @@
 		924249A6208E1D9200940ED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924249A4208E1D9200940ED6 /* Main.storyboard */; };
 		924249A8208E1D9300940ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924249A7208E1D9300940ED6 /* Assets.xcassets */; };
 		924249AB208E1D9300940ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924249A9208E1D9300940ED6 /* LaunchScreen.storyboard */; };
+		92A6CB1A208FE6630008EFF6 /* Seegood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92A6CB18208FE6630008EFF6 /* Seegood.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		924249A7208E1D9300940ED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		924249AA208E1D9300940ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		924249AC208E1D9300940ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		92A6CB19208FE6630008EFF6 /* Users.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Users.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				924249A7208E1D9300940ED6 /* Assets.xcassets */,
 				924249A9208E1D9300940ED6 /* LaunchScreen.storyboard */,
 				924249AC208E1D9300940ED6 /* Info.plist */,
+				92A6CB18208FE6630008EFF6 /* Seegood.xcdatamodeld */,
 			);
 			path = Seegood;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92A6CB1A208FE6630008EFF6 /* Seegood.xcdatamodeld in Sources */,
 				924249A3208E1D9200940ED6 /* ActivitiesViewController.swift in Sources */,
 				924249A1208E1D9200940ED6 /* MasterViewController.swift in Sources */,
 				9242499F208E1D9200940ED6 /* AppDelegate.swift in Sources */,
@@ -338,6 +342,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		92A6CB18208FE6630008EFF6 /* Seegood.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				92A6CB19208FE6630008EFF6 /* Users.xcdatamodel */,
+			);
+			currentVersion = 92A6CB19208FE6630008EFF6 /* Users.xcdatamodel */;
+			path = Seegood.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 92424993208E1D9200940ED6 /* Project object */;
 }
