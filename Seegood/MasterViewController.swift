@@ -112,7 +112,7 @@ class MasterViewController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let usuario = usuarios[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! ActivitiesViewController
-                controller.detailItem = usuario.value(forKey: "nombre") as? String
+                controller.nameUser = usuario.value(forKey: "nombre") as? String
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }else {

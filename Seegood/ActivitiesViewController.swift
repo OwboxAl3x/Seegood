@@ -11,8 +11,14 @@ import UIKit
 class ActivitiesViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
-    var detailItem: String? {
+    @IBOutlet weak var tituloView: UINavigationItem!
+    @IBOutlet weak var tests: UIButton!
+    @IBOutlet weak var exercises: UIButton!
+    @IBOutlet weak var tasks: UIButton!
+    @IBOutlet weak var statistics: UIButton!
+    @IBOutlet weak var profile: UIButton!
+    
+    var nameUser: String? {
         didSet {
             // Update the view.
             configureView()
@@ -21,10 +27,40 @@ class ActivitiesViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.description
+        if let detail = nameUser {
+            if let label = tituloView {
+                label.title = detail.description
+                if let detalle = detailDescriptionLabel {
+                    detalle.isHidden = true
+                    personalizarButtons()
+                }
             }
+        }
+    }
+    
+    func ocultarYRedondear(boton: UIButton) {
+        if boton.isHidden == false {
+            boton.isHidden = true
+        } else {
+            boton.isHidden = false
+            boton.layer.cornerRadius = 5
+            boton.layer.borderWidth = 4
+            boton.layer.borderColor = (UIColor.orange).cgColor
+        }
+    }
+    
+    func personalizarButtons () {
+        ocultarYRedondear(boton: tests)
+        ocultarYRedondear(boton: tasks)
+        ocultarYRedondear(boton: exercises)
+        ocultarYRedondear(boton: statistics)
+        ocultarYRedondear(boton: profile)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "testSegue" {
+            let controller = (segue.destination as! TestViewController)
+            controller.userName = nameUser?.description
         }
     }
 

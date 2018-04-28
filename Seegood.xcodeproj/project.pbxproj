@@ -14,6 +14,7 @@
 		924249A8208E1D9300940ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924249A7208E1D9300940ED6 /* Assets.xcassets */; };
 		924249AB208E1D9300940ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924249A9208E1D9300940ED6 /* LaunchScreen.storyboard */; };
 		92A6CB1A208FE6630008EFF6 /* Seegood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92A6CB18208FE6630008EFF6 /* Seegood.xcdatamodeld */; };
+		92B9B3312093284D007D3766 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9B3302093284D007D3766 /* TestViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		924249AA208E1D9300940ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		924249AC208E1D9300940ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		92A6CB19208FE6630008EFF6 /* Users.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Users.xcdatamodel; sourceTree = "<group>"; };
+		92B9B3302093284D007D3766 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				9242499E208E1D9200940ED6 /* AppDelegate.swift */,
 				924249A0208E1D9200940ED6 /* MasterViewController.swift */,
 				924249A2208E1D9200940ED6 /* ActivitiesViewController.swift */,
+				92B9B3302093284D007D3766 /* TestViewController.swift */,
 				924249A4208E1D9200940ED6 /* Main.storyboard */,
 				924249A7208E1D9300940ED6 /* Assets.xcassets */,
 				924249A9208E1D9300940ED6 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92B9B3312093284D007D3766 /* TestViewController.swift in Sources */,
 				92A6CB1A208FE6630008EFF6 /* Seegood.xcdatamodeld in Sources */,
 				924249A3208E1D9200940ED6 /* ActivitiesViewController.swift in Sources */,
 				924249A1208E1D9200940ED6 /* MasterViewController.swift in Sources */,
