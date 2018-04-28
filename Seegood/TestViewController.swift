@@ -136,8 +136,6 @@ class TestViewController: UIViewController {
         vistaSec.layer.borderWidth = 1
         
         labelTouch.text = "TOUCH EVERY: \(selectedLetter!)"
-        
-        print(userName!)
     }
 
     /*
