@@ -31,6 +31,12 @@ class TestViewController: UIViewController {
     var fallos: Int = 0
     var aciertosTotales: Int = 10
     
+    var primeraPulsación: Bool = true
+    
+    var startTime: CFTimeInterval?
+    var endTime: CFTimeInterval?
+    var totalTime: CFTimeInterval?
+    
     func crearBotones() {
         
         var buttonX: CGFloat = 0
@@ -56,6 +62,10 @@ class TestViewController: UIViewController {
     }
     
     @objc func botonPressed(sender:UIButton!){
+        if primeraPulsación == true {
+            startTime = CACurrentMediaTime()
+            primeraPulsación = false
+        }
         if sender.titleLabel?.text == selectedLetter {
             aciertos += 1
             labelAciertos.text = "Found: \(aciertos)/\(aciertosTotales)"
@@ -70,14 +80,19 @@ class TestViewController: UIViewController {
     }
     
     func terminado() {
-        let alertFinalized = UIAlertController(title: "Finalized", message: labelAciertos.text! + "\n" + labelFallos.text!, preferredStyle: .alert)
+        endTime = CACurrentMediaTime()
+        if startTime != nil {
+            totalTime = endTime! - startTime!
+        } else {
+            totalTime = 0.0
+        }
+        
+        let alertFinalized = UIAlertController(title: "Finalized", message: labelAciertos.text! + "\n" + labelFallos.text! + "\nTime elapsed: \(Int(totalTime!)) seconds", preferredStyle: .alert)
         
         alertFinalized.addAction(UIAlertAction(title: "OK", style: .default, handler: {
             alert -> Void in
             self.performSegue(withIdentifier:"doneSegue", sender: nil)
         }))
-        
-        alertFinalized.addAction(UIAlertAction(title: "Cancel", style: .default, handler: {(action) in }))
         
         present(alertFinalized, animated: true, completion: nil)
     }
