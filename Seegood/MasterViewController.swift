@@ -12,7 +12,7 @@ import CoreData
 class MasterViewController: UITableViewController {
 
     var detailViewController: ActivitiesViewController? = nil
-    var usuarios:[NSManagedObject] = []
+    var usuarios:[Usuarios] = []
     var nombreUsuario:String?
 
 
@@ -24,7 +24,7 @@ class MasterViewController: UITableViewController {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Usuarios")
         
         do {
-            usuarios = try managedContext.fetch(fetchRequest)
+            usuarios = try managedContext.fetch(fetchRequest) as! [Usuarios]
         } catch let error as NSError {
             print("No se pudieron recuperar los datos guardados. El error fue: \(error), \(error.userInfo)")
         }
@@ -91,14 +91,13 @@ class MasterViewController: UITableViewController {
     func insertNewRow(nameUser: String) {
         
         let managedContext = (UIApplication.shared.delegate as? AppDelegate)!.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Usuarios", in: managedContext)!
-        let managedObject = NSManagedObject(entity: entity, insertInto: managedContext)
+        let entUsuarios = NSEntityDescription.insertNewObject(forEntityName: "Usuarios", into: managedContext) as! Usuarios
         
-        managedObject.setValue(nameUser, forKeyPath: "nombre")
+        entUsuarios.nombre = nameUser
         
         do {
             try managedContext.save()
-            usuarios.append(managedObject)
+            usuarios.append(entUsuarios)
         } catch let error as NSError {
             print("No se pudo añadir el nuevo usuario, error: \(error), \(error.userInfo)")
         }
@@ -112,7 +111,7 @@ class MasterViewController: UITableViewController {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let usuario = usuarios[indexPath.row]
                 let controller = (segue.destination as! UINavigationController).topViewController as! ActivitiesViewController
-                controller.nameUser = usuario.value(forKey: "nombre") as? String
+                controller.nameUser = usuario.nombre
                 controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }else {

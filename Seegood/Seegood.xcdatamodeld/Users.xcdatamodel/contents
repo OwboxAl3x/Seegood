@@ -1,9 +1,36 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14133" systemVersion="17E199" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Usuarios" representedClassName="Usuarios" syncable="YES" codeGenerationType="class">
+    <entity name="AgudezaVisual" representedClassName=".AgudezaVisual" syncable="YES">
+        <attribute name="ccOjoDer" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ccOjoIzq" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fecha" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="scOjoDer" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="scOjoIzq" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="avUsuario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuarios" inverseName="usuarioAV" inverseEntity="Usuarios" syncable="YES"/>
+    </entity>
+    <entity name="Ejercicios" representedClassName=".Ejercicios" syncable="YES">
+        <attribute name="aciertos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fallos" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="fecha" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="tiempo" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="ejerciciosUsuario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuarios" inverseName="usuarioEjercicios" inverseEntity="Usuarios" syncable="YES"/>
+    </entity>
+    <entity name="Usuarios" representedClassName=".Usuarios" syncable="YES">
+        <attribute name="cilindroOjoDer" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cilindroOjoIzq" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="direccion" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="ejeOjoDer" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="ejeOjoIzq" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="esferaOjoDer" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="esferaOjoIzq" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="telefono" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="usuarioAV" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AgudezaVisual" inverseName="avUsuario" inverseEntity="AgudezaVisual" syncable="YES"/>
+        <relationship name="usuarioEjercicios" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ejercicios" inverseName="ejerciciosUsuario" inverseEntity="Ejercicios" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Usuarios" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="AgudezaVisual" positionX="-461" positionY="-27" width="128" height="135"/>
+        <element name="Ejercicios" positionX="-20" positionY="-27" width="128" height="120"/>
+        <element name="Usuarios" positionX="-243" positionY="-27" width="126" height="210"/>
     </elements>
 </model>

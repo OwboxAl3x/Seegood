@@ -55,6 +55,7 @@ class ActivitiesViewController: UIViewController {
         ocultarYRedondear(boton: exercises)
         ocultarYRedondear(boton: statistics)
         ocultarYRedondear(boton: profile)
+        profile.setTitle(nameUser?.description.uppercased(), for: .normal)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

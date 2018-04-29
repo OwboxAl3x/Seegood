@@ -7,17 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9213502E2095E6E500B0682F /* Seegood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9213502C2095E6E500B0682F /* Seegood.xcdatamodeld */; };
 		9242499F208E1D9200940ED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242499E208E1D9200940ED6 /* AppDelegate.swift */; };
 		924249A1208E1D9200940ED6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924249A0208E1D9200940ED6 /* MasterViewController.swift */; };
 		924249A3208E1D9200940ED6 /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924249A2208E1D9200940ED6 /* ActivitiesViewController.swift */; };
 		924249A6208E1D9200940ED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924249A4208E1D9200940ED6 /* Main.storyboard */; };
 		924249A8208E1D9300940ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924249A7208E1D9300940ED6 /* Assets.xcassets */; };
 		924249AB208E1D9300940ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924249A9208E1D9300940ED6 /* LaunchScreen.storyboard */; };
-		92A6CB1A208FE6630008EFF6 /* Seegood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 92A6CB18208FE6630008EFF6 /* Seegood.xcdatamodeld */; };
 		92B9B3312093284D007D3766 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9B3302093284D007D3766 /* TestViewController.swift */; };
+		92C381F12095ED1D00E5638E /* Ejercicios+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C381EB2095ED1D00E5638E /* Ejercicios+CoreDataClass.swift */; };
+		92C381F22095ED1D00E5638E /* Ejercicios+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C381EC2095ED1D00E5638E /* Ejercicios+CoreDataProperties.swift */; };
+		92C381F32095ED1D00E5638E /* AgudezaVisual+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C381ED2095ED1D00E5638E /* AgudezaVisual+CoreDataClass.swift */; };
+		92C381F42095ED1D00E5638E /* AgudezaVisual+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C381EE2095ED1D00E5638E /* AgudezaVisual+CoreDataProperties.swift */; };
+		92C381F52095ED1D00E5638E /* Usuarios+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C381EF2095ED1D00E5638E /* Usuarios+CoreDataClass.swift */; };
+		92C381F62095ED1D00E5638E /* Usuarios+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C381F02095ED1D00E5638E /* Usuarios+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9213502D2095E6E500B0682F /* Users.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Users.xcdatamodel; sourceTree = "<group>"; };
 		9242499B208E1D9200940ED6 /* Seegood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seegood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9242499E208E1D9200940ED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		924249A0208E1D9200940ED6 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -26,8 +33,13 @@
 		924249A7208E1D9300940ED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		924249AA208E1D9300940ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		924249AC208E1D9300940ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		92A6CB19208FE6630008EFF6 /* Users.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Users.xcdatamodel; sourceTree = "<group>"; };
 		92B9B3302093284D007D3766 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		92C381EB2095ED1D00E5638E /* Ejercicios+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Ejercicios+CoreDataClass.swift"; path = "Seegood/Ejercicios+CoreDataClass.swift"; sourceTree = "<group>"; };
+		92C381EC2095ED1D00E5638E /* Ejercicios+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Ejercicios+CoreDataProperties.swift"; path = "Seegood/Ejercicios+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		92C381ED2095ED1D00E5638E /* AgudezaVisual+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AgudezaVisual+CoreDataClass.swift"; path = "Seegood/AgudezaVisual+CoreDataClass.swift"; sourceTree = "<group>"; };
+		92C381EE2095ED1D00E5638E /* AgudezaVisual+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AgudezaVisual+CoreDataProperties.swift"; path = "Seegood/AgudezaVisual+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		92C381EF2095ED1D00E5638E /* Usuarios+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Usuarios+CoreDataClass.swift"; path = "Seegood/Usuarios+CoreDataClass.swift"; sourceTree = "<group>"; };
+		92C381F02095ED1D00E5638E /* Usuarios+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Usuarios+CoreDataProperties.swift"; path = "Seegood/Usuarios+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +56,12 @@
 		92424992208E1D9200940ED6 = {
 			isa = PBXGroup;
 			children = (
+				92C381EB2095ED1D00E5638E /* Ejercicios+CoreDataClass.swift */,
+				92C381EC2095ED1D00E5638E /* Ejercicios+CoreDataProperties.swift */,
+				92C381ED2095ED1D00E5638E /* AgudezaVisual+CoreDataClass.swift */,
+				92C381EE2095ED1D00E5638E /* AgudezaVisual+CoreDataProperties.swift */,
+				92C381EF2095ED1D00E5638E /* Usuarios+CoreDataClass.swift */,
+				92C381F02095ED1D00E5638E /* Usuarios+CoreDataProperties.swift */,
 				9242499D208E1D9200940ED6 /* Seegood */,
 				9242499C208E1D9200940ED6 /* Products */,
 			);
@@ -68,7 +86,7 @@
 				924249A7208E1D9300940ED6 /* Assets.xcassets */,
 				924249A9208E1D9300940ED6 /* LaunchScreen.storyboard */,
 				924249AC208E1D9300940ED6 /* Info.plist */,
-				92A6CB18208FE6630008EFF6 /* Seegood.xcdatamodeld */,
+				9213502C2095E6E500B0682F /* Seegood.xcdatamodeld */,
 			);
 			path = Seegood;
 			sourceTree = "<group>";
@@ -145,10 +163,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				92B9B3312093284D007D3766 /* TestViewController.swift in Sources */,
-				92A6CB1A208FE6630008EFF6 /* Seegood.xcdatamodeld in Sources */,
+				92C381F62095ED1D00E5638E /* Usuarios+CoreDataProperties.swift in Sources */,
 				924249A3208E1D9200940ED6 /* ActivitiesViewController.swift in Sources */,
 				924249A1208E1D9200940ED6 /* MasterViewController.swift in Sources */,
+				92C381F22095ED1D00E5638E /* Ejercicios+CoreDataProperties.swift in Sources */,
+				9213502E2095E6E500B0682F /* Seegood.xcdatamodeld in Sources */,
 				9242499F208E1D9200940ED6 /* AppDelegate.swift in Sources */,
+				92C381F52095ED1D00E5638E /* Usuarios+CoreDataClass.swift in Sources */,
+				92C381F42095ED1D00E5638E /* AgudezaVisual+CoreDataProperties.swift in Sources */,
+				92C381F12095ED1D00E5638E /* Ejercicios+CoreDataClass.swift in Sources */,
+				92C381F32095ED1D00E5638E /* AgudezaVisual+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,12 +372,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		92A6CB18208FE6630008EFF6 /* Seegood.xcdatamodeld */ = {
+		9213502C2095E6E500B0682F /* Seegood.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				92A6CB19208FE6630008EFF6 /* Users.xcdatamodel */,
+				9213502D2095E6E500B0682F /* Users.xcdatamodel */,
 			);
-			currentVersion = 92A6CB19208FE6630008EFF6 /* Users.xcdatamodel */;
+			currentVersion = 9213502D2095E6E500B0682F /* Users.xcdatamodel */;
 			path = Seegood.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
