@@ -27,15 +27,21 @@ class ActivitiesViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail = nameUser {
-            if let label = tituloView {
-                label.title = detail.description
-                if let detalle = detailDescriptionLabel {
-                    detalle.isHidden = true
-                    personalizarButtons()
-                }
+        if nameUser != nil {
+            if let detalle = detailDescriptionLabel {
+                detalle.isHidden = true
+                personalizarButtons()
             }
         }
+    }
+    
+    func personalizarButtons () {
+        ocultarYRedondear(boton: tests)
+        ocultarYRedondear(boton: tasks)
+        ocultarYRedondear(boton: exercises)
+        ocultarYRedondear(boton: statistics)
+        ocultarYRedondear(boton: profile)
+        profile.setTitle(nameUser?.description.uppercased(), for: .normal)
     }
     
     func ocultarYRedondear(boton: UIButton) {
@@ -49,18 +55,15 @@ class ActivitiesViewController: UIViewController {
         }
     }
     
-    func personalizarButtons () {
-        ocultarYRedondear(boton: tests)
-        ocultarYRedondear(boton: tasks)
-        ocultarYRedondear(boton: exercises)
-        ocultarYRedondear(boton: statistics)
-        ocultarYRedondear(boton: profile)
-        profile.setTitle(nameUser?.description.uppercased(), for: .normal)
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "testSegue" {
             let controller = (segue.destination as! TestViewController)
+            controller.userName = nameUser?.description
+        } else if segue.identifier == "exercisesSegue" {
+            let controller = (segue.destination as! ExercisesViewController)
+            controller.userName = nameUser?.description
+        } else if segue.identifier == "estadisticasSegue" {
+            let controller = (segue.destination as! EstadisticasViewController)
             controller.userName = nameUser?.description
         }
     }

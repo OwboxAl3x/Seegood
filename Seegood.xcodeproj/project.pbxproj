@@ -22,6 +22,7 @@
 		92C381F52095ED1D00E5638E /* Usuarios+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C381EF2095ED1D00E5638E /* Usuarios+CoreDataClass.swift */; };
 		92C381F62095ED1D00E5638E /* Usuarios+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C381F02095ED1D00E5638E /* Usuarios+CoreDataProperties.swift */; };
 		92C381F82096196A00E5638E /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C381F72096196A00E5638E /* ExercisesViewController.swift */; };
+		92C381FA2096390000E5638E /* EstadisticasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C381F92096390000E5638E /* EstadisticasViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		92C381EF2095ED1D00E5638E /* Usuarios+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Usuarios+CoreDataClass.swift"; path = "Seegood/Usuarios+CoreDataClass.swift"; sourceTree = "<group>"; };
 		92C381F02095ED1D00E5638E /* Usuarios+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Usuarios+CoreDataProperties.swift"; path = "Seegood/Usuarios+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		92C381F72096196A00E5638E /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
+		92C381F92096390000E5638E /* EstadisticasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstadisticasViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 				924249A2208E1D9200940ED6 /* ActivitiesViewController.swift */,
 				92B9B3302093284D007D3766 /* TestViewController.swift */,
 				92C381F72096196A00E5638E /* ExercisesViewController.swift */,
+				92C381F92096390000E5638E /* EstadisticasViewController.swift */,
 				924249A4208E1D9200940ED6 /* Main.storyboard */,
 				924249A7208E1D9300940ED6 /* Assets.xcassets */,
 				924249A9208E1D9300940ED6 /* LaunchScreen.storyboard */,
@@ -177,6 +180,7 @@
 				92C381F42095ED1D00E5638E /* AgudezaVisual+CoreDataProperties.swift in Sources */,
 				92C381F12095ED1D00E5638E /* Ejercicios+CoreDataClass.swift in Sources */,
 				92C381F32095ED1D00E5638E /* AgudezaVisual+CoreDataClass.swift in Sources */,
+				92C381FA2096390000E5638E /* EstadisticasViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
