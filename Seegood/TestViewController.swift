@@ -31,6 +31,8 @@ class TestViewController: UIViewController {
     var fallos: Int = 0
     var aciertosTotales: Int = 10
     
+    var colores: [UIColor] = [UIColor.black, UIColor.blue, UIColor.red, UIColor.green]
+    
     var primeraPulsación: Bool = true
     
     var startTime: CFTimeInterval?
@@ -47,7 +49,8 @@ class TestViewController: UIViewController {
                 let boton = UIButton(frame: CGRect(x: buttonX, y: buttonY, width: anchoBoton!, height: altoBoton!))
                 botones.append(boton)
                 buttonX = buttonX + anchoBoton!
-                boton.setTitleColor(UIColor.black, for: .normal)
+                let rand = arc4random_uniform(4)
+                boton.setTitleColor(colores[Int(rand)], for: .normal)
                 boton.setTitle(randomString(length: 1), for: .normal)
                 if boton.titleLabel?.text == selectedLetter {
                     letraPuesta += 1
