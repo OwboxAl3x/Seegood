@@ -220,7 +220,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7uB-iD-tEs">
                                 <rect key="frame" x="-17" y="388" width="1059" height="60"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Agudeza Visual" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wte-YI-UUU">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visual Acuity" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wte-YI-UUU">
                                         <rect key="frame" x="407" y="8" width="245" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="245" id="nw9-aB-Vg3"/>
@@ -241,21 +241,21 @@
                                 <rect key="frame" x="0.0" y="456" width="1024" height="312"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="coi-Lh-qRS" detailTextLabel="HAO-QD-Ojy" style="IBUITableViewCellStyleSubtitle" id="Lbv-XU-EJ5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellAV" textLabel="3ql-MD-jtC" detailTextLabel="rY3-pu-FRt" style="IBUITableViewCellStyleSubtitle" id="Lbv-XU-EJ5">
                                         <rect key="frame" x="0.0" y="28" width="1024" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lbv-XU-EJ5" id="Sqt-U3-34Q">
                                             <rect key="frame" x="0.0" y="0.0" width="1024" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="coi-Lh-qRS">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3ql-MD-jtC">
                                                     <rect key="frame" x="15" y="5" width="33.5" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HAO-QD-Ojy">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rY3-pu-FRt">
                                                     <rect key="frame" x="15" y="25.5" width="44" height="14.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
@@ -273,22 +273,23 @@
                             <constraint firstItem="OGf-rp-ULt" firstAttribute="centerX" secondItem="eZ3-bl-QY7" secondAttribute="centerX" id="29w-0F-30k"/>
                             <constraint firstItem="OGf-rp-ULt" firstAttribute="leading" secondItem="TQ4-sR-bJw" secondAttribute="leadingMargin" constant="-37" id="3mq-ac-JMI"/>
                             <constraint firstItem="eZ3-bl-QY7" firstAttribute="leading" secondItem="TQ4-sR-bJw" secondAttribute="leading" id="6px-GV-OqG"/>
+                            <constraint firstItem="kjY-A7-QY3" firstAttribute="bottom" secondItem="c5I-vV-HXb" secondAttribute="bottom" id="8WH-PI-oef"/>
                             <constraint firstItem="eZ3-bl-QY7" firstAttribute="top" secondItem="TQ4-sR-bJw" secondAttribute="top" constant="88" id="BUw-qr-msD"/>
                             <constraint firstItem="7uB-iD-tEs" firstAttribute="top" secondItem="eZ3-bl-QY7" secondAttribute="bottom" constant="8" symbolic="YES" id="CUU-Tc-6ME"/>
-                            <constraint firstItem="kjY-A7-QY3" firstAttribute="trailing" secondItem="eZ3-bl-QY7" secondAttribute="trailing" id="Frg-RI-gwb"/>
                             <constraint firstItem="OGf-rp-ULt" firstAttribute="trailing" secondItem="7uB-iD-tEs" secondAttribute="trailing" id="GaR-Id-LRB"/>
+                            <constraint firstItem="kjY-A7-QY3" firstAttribute="top" secondItem="7uB-iD-tEs" secondAttribute="bottom" constant="8" symbolic="YES" id="T9Z-IP-pHy"/>
                             <constraint firstAttribute="trailing" secondItem="eZ3-bl-QY7" secondAttribute="trailing" id="a4N-Wc-Jdg"/>
-                            <constraint firstItem="kjY-A7-QY3" firstAttribute="top" secondItem="7uB-iD-tEs" secondAttribute="bottom" constant="8" symbolic="YES" id="cmT-O4-dwB"/>
                             <constraint firstItem="c5I-vV-HXb" firstAttribute="bottom" secondItem="7uB-iD-tEs" secondAttribute="bottom" constant="320" id="epn-zh-hYI"/>
-                            <constraint firstItem="kjY-A7-QY3" firstAttribute="bottom" secondItem="c5I-vV-HXb" secondAttribute="bottom" id="exB-b0-QEu"/>
+                            <constraint firstItem="kjY-A7-QY3" firstAttribute="leading" secondItem="eZ3-bl-QY7" secondAttribute="leading" id="jNb-BN-xBH"/>
                             <constraint firstItem="OGf-rp-ULt" firstAttribute="leading" secondItem="7uB-iD-tEs" secondAttribute="leading" id="mWJ-pG-BeI"/>
                             <constraint firstItem="OGf-rp-ULt" firstAttribute="top" secondItem="c5I-vV-HXb" secondAttribute="top" id="o7O-8N-huK"/>
                             <constraint firstItem="eZ3-bl-QY7" firstAttribute="top" secondItem="OGf-rp-ULt" secondAttribute="bottom" constant="8" symbolic="YES" id="sFv-Sd-JWf"/>
-                            <constraint firstItem="kjY-A7-QY3" firstAttribute="leading" secondItem="eZ3-bl-QY7" secondAttribute="leading" id="sRb-Gr-jLb"/>
+                            <constraint firstItem="kjY-A7-QY3" firstAttribute="trailing" secondItem="eZ3-bl-QY7" secondAttribute="trailing" id="vMa-Hm-wNk"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="c5I-vV-HXb"/>
                     </view>
                     <connections>
+                        <outlet property="avTableView" destination="kjY-A7-QY3" id="vWS-ab-Fyg"/>
                         <outlet property="ejerciciosTableView" destination="eZ3-bl-QY7" id="Kfl-5m-Tfi"/>
                     </connections>
                 </viewController>
