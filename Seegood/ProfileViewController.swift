@@ -17,6 +17,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var phoneUser: UITextField!
     @IBOutlet weak var birthdayUser: UIDatePicker!
     @IBOutlet weak var photoUser: UIImageView!
+    @IBOutlet weak var noImagen: UILabel!
     
     var userName: String?
     var currentUser: Usuarios?
@@ -137,6 +138,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 }
                 if currentUser?.foto != nil {
                     photoUser.image = UIImage(data: (currentUser?.foto as Data?)!)
+                    noImagen.isHidden = true
                 }
                 
             }
@@ -174,6 +176,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             
             self.photoUser.image = pickedImage
+            self.noImagen.isHidden = true
             
         }
         
