@@ -65,6 +65,9 @@ class ActivitiesViewController: UIViewController {
         } else if segue.identifier == "estadisticasSegue" {
             let controller = (segue.destination as! EstadisticasViewController)
             controller.userName = nameUser?.description
+        } else if segue.identifier == "profileSegue" {
+            let controller = (segue.destination as! ProfileViewController)
+            controller.userName = nameUser?.description
         }
     }
 

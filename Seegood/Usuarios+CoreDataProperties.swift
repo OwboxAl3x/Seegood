@@ -2,7 +2,7 @@
 //  Usuarios+CoreDataProperties.swift
 //  Seegood
 //
-//  Created by Alejandro Garcia Vallecillo on 29/4/18.
+//  Created by Alejandro Garcia Vallecillo on 2/5/18.
 //  Copyright © 2018 Alejandro Garcia Vallecillo. All rights reserved.
 //
 //
@@ -19,6 +19,7 @@ extension Usuarios {
 
     @NSManaged public var cilindroOjoDer: Float
     @NSManaged public var cilindroOjoIzq: Float
+    @NSManaged public var cumple: NSDate?
     @NSManaged public var direccion: String?
     @NSManaged public var ejeOjoDer: Int16
     @NSManaged public var ejeOjoIzq: Int16
@@ -26,6 +27,7 @@ extension Usuarios {
     @NSManaged public var esferaOjoIzq: Float
     @NSManaged public var nombre: String?
     @NSManaged public var telefono: String?
+    @NSManaged public var foto: NSData?
     @NSManaged public var usuarioAV: NSSet?
     @NSManaged public var usuarioEjercicios: NSSet?
 

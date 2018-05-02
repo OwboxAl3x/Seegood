@@ -18,11 +18,13 @@
     <entity name="Usuarios" representedClassName=".Usuarios" syncable="YES">
         <attribute name="cilindroOjoDer" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="cilindroOjoIzq" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="cumple" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="direccion" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="ejeOjoDer" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="ejeOjoIzq" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="esferaOjoDer" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="esferaOjoIzq" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="foto" optional="YES" attributeType="Binary" syncable="YES"/>
         <attribute name="nombre" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="telefono" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="usuarioAV" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AgudezaVisual" inverseName="avUsuario" inverseEntity="AgudezaVisual" syncable="YES"/>
@@ -31,6 +33,6 @@
     <elements>
         <element name="AgudezaVisual" positionX="-461" positionY="-27" width="128" height="135"/>
         <element name="Ejercicios" positionX="-20" positionY="-27" width="128" height="120"/>
-        <element name="Usuarios" positionX="-243" positionY="-27" width="126" height="210"/>
+        <element name="Usuarios" positionX="-243" positionY="-27" width="126" height="240"/>
     </elements>
 </model>
