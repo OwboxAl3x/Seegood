@@ -2,7 +2,7 @@
 //  AgudezaVisual+CoreDataClass.swift
 //  Seegood
 //
-//  Created by Alejandro Garcia Vallecillo on 2/5/18.
+//  Created by Alejandro Garcia Vallecillo on 3/5/18.
 //  Copyright © 2018 Alejandro Garcia Vallecillo. All rights reserved.
 //
 //

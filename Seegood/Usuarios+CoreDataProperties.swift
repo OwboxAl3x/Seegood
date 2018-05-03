@@ -2,7 +2,7 @@
 //  Usuarios+CoreDataProperties.swift
 //  Seegood
 //
-//  Created by Alejandro Garcia Vallecillo on 2/5/18.
+//  Created by Alejandro Garcia Vallecillo on 3/5/18.
 //  Copyright © 2018 Alejandro Garcia Vallecillo. All rights reserved.
 //
 //
@@ -25,16 +25,34 @@ extension Usuarios {
     @NSManaged public var ejeOjoIzq: Int16
     @NSManaged public var esferaOjoDer: Float
     @NSManaged public var esferaOjoIzq: Float
+    @NSManaged public var foto: NSData?
     @NSManaged public var nombre: String?
     @NSManaged public var telefono: String?
-    @NSManaged public var foto: NSData?
-    @NSManaged public var usuarioAV: NSSet?
-    @NSManaged public var usuarioEjercicios: NSSet?
+    @NSManaged public var usuarioAV: NSOrderedSet?
+    @NSManaged public var usuarioEjercicios: NSOrderedSet?
 
 }
 
 // MARK: Generated accessors for usuarioAV
 extension Usuarios {
+
+    @objc(insertObject:inUsuarioAVAtIndex:)
+    @NSManaged public func insertIntoUsuarioAV(_ value: AgudezaVisual, at idx: Int)
+
+    @objc(removeObjectFromUsuarioAVAtIndex:)
+    @NSManaged public func removeFromUsuarioAV(at idx: Int)
+
+    @objc(insertUsuarioAV:atIndexes:)
+    @NSManaged public func insertIntoUsuarioAV(_ values: [AgudezaVisual], at indexes: NSIndexSet)
+
+    @objc(removeUsuarioAVAtIndexes:)
+    @NSManaged public func removeFromUsuarioAV(at indexes: NSIndexSet)
+
+    @objc(replaceObjectInUsuarioAVAtIndex:withObject:)
+    @NSManaged public func replaceUsuarioAV(at idx: Int, with value: AgudezaVisual)
+
+    @objc(replaceUsuarioAVAtIndexes:withUsuarioAV:)
+    @NSManaged public func replaceUsuarioAV(at indexes: NSIndexSet, with values: [AgudezaVisual])
 
     @objc(addUsuarioAVObject:)
     @NSManaged public func addToUsuarioAV(_ value: AgudezaVisual)
@@ -43,15 +61,33 @@ extension Usuarios {
     @NSManaged public func removeFromUsuarioAV(_ value: AgudezaVisual)
 
     @objc(addUsuarioAV:)
-    @NSManaged public func addToUsuarioAV(_ values: NSSet)
+    @NSManaged public func addToUsuarioAV(_ values: NSOrderedSet)
 
     @objc(removeUsuarioAV:)
-    @NSManaged public func removeFromUsuarioAV(_ values: NSSet)
+    @NSManaged public func removeFromUsuarioAV(_ values: NSOrderedSet)
 
 }
 
 // MARK: Generated accessors for usuarioEjercicios
 extension Usuarios {
+
+    @objc(insertObject:inUsuarioEjerciciosAtIndex:)
+    @NSManaged public func insertIntoUsuarioEjercicios(_ value: Ejercicios, at idx: Int)
+
+    @objc(removeObjectFromUsuarioEjerciciosAtIndex:)
+    @NSManaged public func removeFromUsuarioEjercicios(at idx: Int)
+
+    @objc(insertUsuarioEjercicios:atIndexes:)
+    @NSManaged public func insertIntoUsuarioEjercicios(_ values: [Ejercicios], at indexes: NSIndexSet)
+
+    @objc(removeUsuarioEjerciciosAtIndexes:)
+    @NSManaged public func removeFromUsuarioEjercicios(at indexes: NSIndexSet)
+
+    @objc(replaceObjectInUsuarioEjerciciosAtIndex:withObject:)
+    @NSManaged public func replaceUsuarioEjercicios(at idx: Int, with value: Ejercicios)
+
+    @objc(replaceUsuarioEjerciciosAtIndexes:withUsuarioEjercicios:)
+    @NSManaged public func replaceUsuarioEjercicios(at indexes: NSIndexSet, with values: [Ejercicios])
 
     @objc(addUsuarioEjerciciosObject:)
     @NSManaged public func addToUsuarioEjercicios(_ value: Ejercicios)
@@ -60,9 +96,9 @@ extension Usuarios {
     @NSManaged public func removeFromUsuarioEjercicios(_ value: Ejercicios)
 
     @objc(addUsuarioEjercicios:)
-    @NSManaged public func addToUsuarioEjercicios(_ values: NSSet)
+    @NSManaged public func addToUsuarioEjercicios(_ values: NSOrderedSet)
 
     @objc(removeUsuarioEjercicios:)
-    @NSManaged public func removeFromUsuarioEjercicios(_ values: NSSet)
+    @NSManaged public func removeFromUsuarioEjercicios(_ values: NSOrderedSet)
 
 }

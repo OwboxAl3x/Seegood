@@ -14,17 +14,58 @@
 		924249A6208E1D9200940ED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924249A4208E1D9200940ED6 /* Main.storyboard */; };
 		924249A8208E1D9300940ED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 924249A7208E1D9300940ED6 /* Assets.xcassets */; };
 		924249AB208E1D9300940ED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 924249A9208E1D9300940ED6 /* LaunchScreen.storyboard */; };
-		9267DAAC209A4ABE00A8D9E5 /* Ejercicios+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9267DAA6209A4ABE00A8D9E5 /* Ejercicios+CoreDataClass.swift */; };
-		9267DAAD209A4ABE00A8D9E5 /* Ejercicios+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9267DAA7209A4ABE00A8D9E5 /* Ejercicios+CoreDataProperties.swift */; };
-		9267DAAE209A4ABE00A8D9E5 /* Usuarios+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9267DAA8209A4ABE00A8D9E5 /* Usuarios+CoreDataClass.swift */; };
-		9267DAAF209A4ABE00A8D9E5 /* Usuarios+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9267DAA9209A4ABE00A8D9E5 /* Usuarios+CoreDataProperties.swift */; };
-		9267DAB0209A4ABE00A8D9E5 /* AgudezaVisual+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9267DAAA209A4ABE00A8D9E5 /* AgudezaVisual+CoreDataClass.swift */; };
-		9267DAB1209A4ABE00A8D9E5 /* AgudezaVisual+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9267DAAB209A4ABE00A8D9E5 /* AgudezaVisual+CoreDataProperties.swift */; };
+		925BA289209B7ED300C4D473 /* Ejercicios+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925BA283209B7ED300C4D473 /* Ejercicios+CoreDataClass.swift */; };
+		925BA28A209B7ED300C4D473 /* Ejercicios+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925BA284209B7ED300C4D473 /* Ejercicios+CoreDataProperties.swift */; };
+		925BA28B209B7ED300C4D473 /* Usuarios+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925BA285209B7ED300C4D473 /* Usuarios+CoreDataClass.swift */; };
+		925BA28C209B7ED300C4D473 /* Usuarios+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925BA286209B7ED300C4D473 /* Usuarios+CoreDataProperties.swift */; };
+		925BA28D209B7ED300C4D473 /* AgudezaVisual+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925BA287209B7ED300C4D473 /* AgudezaVisual+CoreDataClass.swift */; };
+		925BA28E209B7ED300C4D473 /* AgudezaVisual+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925BA288209B7ED300C4D473 /* AgudezaVisual+CoreDataProperties.swift */; };
 		929D79BB2098C298003C1B5C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 929D79BA2098C298003C1B5C /* ProfileViewController.swift */; };
 		92B9B3312093284D007D3766 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92B9B3302093284D007D3766 /* TestViewController.swift */; };
 		92C381F82096196A00E5638E /* ExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C381F72096196A00E5638E /* ExercisesViewController.swift */; };
 		92C381FA2096390000E5638E /* EstadisticasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C381F92096390000E5638E /* EstadisticasViewController.swift */; };
+		92C8A5F8209B523700A6359F /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8A5F4209B518900A6359F /* Charts.framework */; };
+		92C8A5F9209B741000A6359F /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8A5F4209B518900A6359F /* Charts.framework */; };
+		92C8A5FA209B741000A6359F /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 92C8A5F4209B518900A6359F /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		92C8A5F3209B518900A6359F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92C8A5EE209B518900A6359F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 65AD9E95D9ED4DC0BD73A743;
+			remoteInfo = Charts;
+		};
+		92C8A5F5209B518900A6359F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92C8A5EE209B518900A6359F /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 1CBBC58C6CE1EBEE9852CE41;
+			remoteInfo = ChartsTests;
+		};
+		92C8A5FB209B741000A6359F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 92C8A5EE209B518900A6359F /* Charts.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = A58A4ED274A941CA248EA921;
+			remoteInfo = Charts;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		92C8A5FD209B741000A6359F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				92C8A5FA209B741000A6359F /* Charts.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		9213502D2095E6E500B0682F /* Users.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Users.xcdatamodel; sourceTree = "<group>"; };
@@ -36,16 +77,17 @@
 		924249A7208E1D9300940ED6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		924249AA208E1D9300940ED6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		924249AC208E1D9300940ED6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9267DAA6209A4ABE00A8D9E5 /* Ejercicios+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Ejercicios+CoreDataClass.swift"; path = "Seegood/Ejercicios+CoreDataClass.swift"; sourceTree = "<group>"; };
-		9267DAA7209A4ABE00A8D9E5 /* Ejercicios+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Ejercicios+CoreDataProperties.swift"; path = "Seegood/Ejercicios+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		9267DAA8209A4ABE00A8D9E5 /* Usuarios+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Usuarios+CoreDataClass.swift"; path = "Seegood/Usuarios+CoreDataClass.swift"; sourceTree = "<group>"; };
-		9267DAA9209A4ABE00A8D9E5 /* Usuarios+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Usuarios+CoreDataProperties.swift"; path = "Seegood/Usuarios+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		9267DAAA209A4ABE00A8D9E5 /* AgudezaVisual+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AgudezaVisual+CoreDataClass.swift"; path = "Seegood/AgudezaVisual+CoreDataClass.swift"; sourceTree = "<group>"; };
-		9267DAAB209A4ABE00A8D9E5 /* AgudezaVisual+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AgudezaVisual+CoreDataProperties.swift"; path = "Seegood/AgudezaVisual+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		925BA283209B7ED300C4D473 /* Ejercicios+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Ejercicios+CoreDataClass.swift"; path = "Seegood/Ejercicios+CoreDataClass.swift"; sourceTree = "<group>"; };
+		925BA284209B7ED300C4D473 /* Ejercicios+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Ejercicios+CoreDataProperties.swift"; path = "Seegood/Ejercicios+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		925BA285209B7ED300C4D473 /* Usuarios+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Usuarios+CoreDataClass.swift"; path = "Seegood/Usuarios+CoreDataClass.swift"; sourceTree = "<group>"; };
+		925BA286209B7ED300C4D473 /* Usuarios+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Usuarios+CoreDataProperties.swift"; path = "Seegood/Usuarios+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		925BA287209B7ED300C4D473 /* AgudezaVisual+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AgudezaVisual+CoreDataClass.swift"; path = "Seegood/AgudezaVisual+CoreDataClass.swift"; sourceTree = "<group>"; };
+		925BA288209B7ED300C4D473 /* AgudezaVisual+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "AgudezaVisual+CoreDataProperties.swift"; path = "Seegood/AgudezaVisual+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		929D79BA2098C298003C1B5C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		92B9B3302093284D007D3766 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		92C381F72096196A00E5638E /* ExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesViewController.swift; sourceTree = "<group>"; };
 		92C381F92096390000E5638E /* EstadisticasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstadisticasViewController.swift; sourceTree = "<group>"; };
+		92C8A5EE209B518900A6359F /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../../../../Downloads/Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +95,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C8A5F8209B523700A6359F /* Charts.framework in Frameworks */,
+				92C8A5F9209B741000A6359F /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,14 +106,16 @@
 		92424992208E1D9200940ED6 = {
 			isa = PBXGroup;
 			children = (
-				9267DAA6209A4ABE00A8D9E5 /* Ejercicios+CoreDataClass.swift */,
-				9267DAA7209A4ABE00A8D9E5 /* Ejercicios+CoreDataProperties.swift */,
-				9267DAA8209A4ABE00A8D9E5 /* Usuarios+CoreDataClass.swift */,
-				9267DAA9209A4ABE00A8D9E5 /* Usuarios+CoreDataProperties.swift */,
-				9267DAAA209A4ABE00A8D9E5 /* AgudezaVisual+CoreDataClass.swift */,
-				9267DAAB209A4ABE00A8D9E5 /* AgudezaVisual+CoreDataProperties.swift */,
+				925BA283209B7ED300C4D473 /* Ejercicios+CoreDataClass.swift */,
+				925BA284209B7ED300C4D473 /* Ejercicios+CoreDataProperties.swift */,
+				925BA285209B7ED300C4D473 /* Usuarios+CoreDataClass.swift */,
+				925BA286209B7ED300C4D473 /* Usuarios+CoreDataProperties.swift */,
+				925BA287209B7ED300C4D473 /* AgudezaVisual+CoreDataClass.swift */,
+				925BA288209B7ED300C4D473 /* AgudezaVisual+CoreDataProperties.swift */,
+				92C8A5EE209B518900A6359F /* Charts.xcodeproj */,
 				9242499D208E1D9200940ED6 /* Seegood */,
 				9242499C208E1D9200940ED6 /* Products */,
+				92C8A5F7209B523700A6359F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +146,22 @@
 			path = Seegood;
 			sourceTree = "<group>";
 		};
+		92C8A5EF209B518900A6359F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				92C8A5F4209B518900A6359F /* Charts.framework */,
+				92C8A5F6209B518900A6359F /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		92C8A5F7209B523700A6359F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -110,10 +172,12 @@
 				92424997208E1D9200940ED6 /* Sources */,
 				92424998208E1D9200940ED6 /* Frameworks */,
 				92424999208E1D9200940ED6 /* Resources */,
+				92C8A5FD209B741000A6359F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				92C8A5FC209B741000A6359F /* PBXTargetDependency */,
 			);
 			name = Seegood;
 			productName = Seegood;
@@ -146,12 +210,35 @@
 			mainGroup = 92424992208E1D9200940ED6;
 			productRefGroup = 9242499C208E1D9200940ED6 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 92C8A5EF209B518900A6359F /* Products */;
+					ProjectRef = 92C8A5EE209B518900A6359F /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				9242499A208E1D9200940ED6 /* Seegood */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		92C8A5F4209B518900A6359F /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 92C8A5F3209B518900A6359F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		92C8A5F6209B518900A6359F /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 92C8A5F5209B518900A6359F /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		92424999208E1D9200940ED6 /* Resources */ = {
@@ -171,24 +258,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9267DAB0209A4ABE00A8D9E5 /* AgudezaVisual+CoreDataClass.swift in Sources */,
+				925BA28D209B7ED300C4D473 /* AgudezaVisual+CoreDataClass.swift in Sources */,
 				92B9B3312093284D007D3766 /* TestViewController.swift in Sources */,
-				9267DAAD209A4ABE00A8D9E5 /* Ejercicios+CoreDataProperties.swift in Sources */,
+				925BA28A209B7ED300C4D473 /* Ejercicios+CoreDataProperties.swift in Sources */,
 				92C381F82096196A00E5638E /* ExercisesViewController.swift in Sources */,
-				9267DAAC209A4ABE00A8D9E5 /* Ejercicios+CoreDataClass.swift in Sources */,
+				925BA289209B7ED300C4D473 /* Ejercicios+CoreDataClass.swift in Sources */,
 				924249A3208E1D9200940ED6 /* ActivitiesViewController.swift in Sources */,
 				929D79BB2098C298003C1B5C /* ProfileViewController.swift in Sources */,
 				924249A1208E1D9200940ED6 /* MasterViewController.swift in Sources */,
 				9213502E2095E6E500B0682F /* Seegood.xcdatamodeld in Sources */,
 				9242499F208E1D9200940ED6 /* AppDelegate.swift in Sources */,
-				9267DAAE209A4ABE00A8D9E5 /* Usuarios+CoreDataClass.swift in Sources */,
-				9267DAAF209A4ABE00A8D9E5 /* Usuarios+CoreDataProperties.swift in Sources */,
+				925BA28B209B7ED300C4D473 /* Usuarios+CoreDataClass.swift in Sources */,
+				925BA28C209B7ED300C4D473 /* Usuarios+CoreDataProperties.swift in Sources */,
 				92C381FA2096390000E5638E /* EstadisticasViewController.swift in Sources */,
-				9267DAB1209A4ABE00A8D9E5 /* AgudezaVisual+CoreDataProperties.swift in Sources */,
+				925BA28E209B7ED300C4D473 /* AgudezaVisual+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		92C8A5FC209B741000A6359F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Charts;
+			targetProxy = 92C8A5FB209B741000A6359F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		924249A4208E1D9200940ED6 /* Main.storyboard */ = {
@@ -327,6 +422,7 @@
 		924249B0208E1D9300940ED6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DQNFBYPA5D;
@@ -345,6 +441,7 @@
 		924249B1208E1D9300940ED6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DQNFBYPA5D;

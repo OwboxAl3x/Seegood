@@ -9,15 +9,24 @@
 import UIKit
 import CoreData
 import Photos
+import Charts
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var nameUser: UILabel!
-    @IBOutlet weak var addressUser: UITextField!
     @IBOutlet weak var phoneUser: UITextField!
+    @IBOutlet weak var addressUser: UITextField!
     @IBOutlet weak var birthdayUser: UIDatePicker!
     @IBOutlet weak var photoUser: UIImageView!
     @IBOutlet weak var noImagen: UILabel!
+    
+    @IBOutlet weak var CCODlabel: UITextField!
+    @IBOutlet weak var CCOIlabel: UITextField!
+    @IBOutlet weak var SCODlabel: UITextField!
+    @IBOutlet weak var SCOIlabel: UITextField!
+    
+    @IBOutlet weak var chtChart: LineChartView!
+    @IBOutlet weak var actuChart: UITextField!
     
     var userName: String?
     var currentUser: Usuarios?
@@ -25,6 +34,167 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     var camaraPermisos: Bool = false
     var libreriaPermisos: Bool = false
 
+    @IBAction func updateAV(_ sender: Any) {
+        
+        if (currentUser?.usuarioAV?.count)! < 1 {
+            
+            let managedContext = (UIApplication.shared.delegate as? AppDelegate)!.persistentContainer.viewContext
+            let av = NSEntityDescription.insertNewObject(forEntityName: "AgudezaVisual", into: managedContext) as! AgudezaVisual
+            
+            if CCODlabel.text != nil {
+                av.ccOjoDer = (CCODlabel.text! as NSString).floatValue
+            } else {
+                av.ccOjoDer = 0.0
+            }
+            if CCODlabel.text != nil {
+                av.ccOjoIzq = (CCOIlabel.text! as NSString).floatValue
+            } else {
+                av.ccOjoIzq = 0.0
+            }
+            if CCODlabel.text != nil {
+                av.scOjoDer = (SCODlabel.text! as NSString).floatValue
+            } else {
+                av.scOjoDer = 0.0
+            }
+            if CCODlabel.text != nil {
+                av.scOjoIzq = (SCOIlabel.text! as NSString).floatValue
+            } else {
+                av.scOjoIzq = 0.0
+            }
+            
+            CCODlabel.text = ""
+            CCOIlabel.text = ""
+            SCODlabel.text = ""
+            SCOIlabel.text = ""
+            
+            CCODlabel.endEditing(true)
+            CCOIlabel.endEditing(true)
+            SCODlabel.endEditing(true)
+            SCOIlabel.endEditing(true)
+            
+            av.fecha = Date() as NSDate
+            
+            currentUser?.addToUsuarioAV(av)
+            
+            do {
+                try managedContext.save()
+                updateGraph()
+            } catch let error as NSError {
+                print("No se pudo las estadisticas al usuario, error: \(error), \(error.userInfo)")
+            }
+            
+        } else {
+            
+            CCODlabel.endEditing(true)
+            CCOIlabel.endEditing(true)
+            SCODlabel.endEditing(true)
+            SCOIlabel.endEditing(true)
+            
+            let alertVC = UIAlertController(title: "Message", message: "First AV already entered", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertVC.addAction(action)
+            present(alertVC, animated: true, completion: nil)
+            
+        }
+        
+    }
+    
+    @IBAction func actualizarChart(_ sender: Any) {
+        
+        if actuChart.text != "" {
+        
+            let managedContext = (UIApplication.shared.delegate as? AppDelegate)!.persistentContainer.viewContext
+            let av = NSEntityDescription.insertNewObject(forEntityName: "AgudezaVisual", into: managedContext) as! AgudezaVisual
+        
+            if (currentUser?.usuarioAV?.count)! > 0 {
+                
+                let ultimoAV = currentUser?.usuarioAV?.object(at: (currentUser?.usuarioAV?.count)!-1) as! AgudezaVisual
+                
+                let input = Float(actuChart.text!)
+                
+                if av.ccOjoDer < av.ccOjoIzq {
+                    av.ccOjoDer = input!
+                    av.ccOjoIzq = ultimoAV.ccOjoIzq
+                    av.scOjoDer = ultimoAV.scOjoDer
+                    av.scOjoIzq = ultimoAV.scOjoIzq
+                    av.fecha = Date() as NSDate
+                } else {
+                    av.ccOjoIzq = input!
+                    av.ccOjoDer = ultimoAV.ccOjoDer
+                    av.scOjoDer = ultimoAV.scOjoDer
+                    av.scOjoIzq = ultimoAV.scOjoIzq
+                    av.fecha = Date() as NSDate
+                }
+                
+                currentUser?.addToUsuarioAV(av)
+                
+                actuChart.text = ""
+                actuChart.endEditing(true)
+                
+                do {
+                    try managedContext.save()
+                    updateGraph()
+                } catch let error as NSError {
+                    print("No se pudo las estadisticas al usuario, error: \(error), \(error.userInfo)")
+                }
+                
+            } else {
+                
+                let alertVC = UIAlertController(title: "Message", message: "Enter a data before updating", preferredStyle: .alert)
+                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alertVC.addAction(action)
+                present(alertVC, animated: true, completion: nil)
+                
+            }
+        
+        } else {
+            
+            let alertVC = UIAlertController(title: "Message", message: "Enter a data before updating", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alertVC.addAction(action)
+            present(alertVC, animated: true, completion: nil)
+            
+        }
+        
+    }
+    
+    func updateGraph() {
+        
+        if (currentUser?.usuarioAV?.count)! > 0 {
+        
+            var lineChartEntry = [ChartDataEntry]()
+            var ojo: String?
+            
+            for i in 0..<(currentUser?.usuarioAV?.count)! {
+                
+                let av = currentUser?.usuarioAV?.object(at: i) as! AgudezaVisual
+                let dato: Double?
+                if av.ccOjoDer < av.ccOjoIzq {
+                    dato = Double(av.ccOjoDer)
+                    ojo = "Con compensación Ojo Derecho"
+                } else {
+                    dato = Double(av.ccOjoIzq)
+                    ojo = "Con compensación Ojo Izquierdo"
+                }
+                
+                let value = ChartDataEntry(x: Double(i), y: dato!)
+                lineChartEntry.append(value)
+                
+            }
+            
+            let line1 = LineChartDataSet(values: lineChartEntry, label: ojo)
+            line1.colors = [UIColor.blue]
+            
+            let data = LineChartData()
+            data.addDataSet(line1)
+            
+            chtChart.data = data
+            chtChart.chartDescription?.text = "Agudeza Visual"
+            
+        }
+        
+    }
+    
     @IBAction func updateData(_ sender: Any) {
         
         let managedContext = (UIApplication.shared.delegate as? AppDelegate)!.persistentContainer.viewContext
@@ -145,6 +315,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         } catch let error as NSError {
             print("El error fue: \(error), \(error.userInfo)")
         }
+        
+        updateGraph()
         
     }
     

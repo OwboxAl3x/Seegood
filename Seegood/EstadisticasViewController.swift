@@ -69,7 +69,7 @@ class EstadisticasViewController: UIViewController, UITableViewDelegate, UITable
         
         if tableView == self.ejerciciosTableView{
             cell = tableView.dequeueReusableCell(withIdentifier: "cellEjercicios", for: indexPath)
-            guard let ejercicio = currentUser?.usuarioEjercicios?.allObjects[indexPath.row] as? Ejercicios, let founded = ejercicio.aciertos as? Int16, let failed = ejercicio.fallos as? Int16, let date = ejercicio.fecha as Date?, let time = ejercicio.tiempo as? Int16 else {
+            guard let ejercicio = currentUser?.usuarioEjercicios?.object(at: indexPath.row) as? Ejercicios, let founded = ejercicio.aciertos as? Int16, let failed = ejercicio.fallos as? Int16, let date = ejercicio.fecha as Date?, let time = ejercicio.tiempo as? Int16 else {
                 return cell!
             }
         
@@ -85,7 +85,7 @@ class EstadisticasViewController: UIViewController, UITableViewDelegate, UITable
             
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier: "cellAV", for: indexPath)
-            guard let av = currentUser?.usuarioAV?.allObjects[indexPath.row] as? AgudezaVisual, let ccOD = av.ccOjoDer as? Float, let ccOI = av.ccOjoIzq as? Float, let scOD = av.scOjoIzq as? Float, let scOI = av.scOjoIzq as? Float, let date = av.fecha as Date? else {
+            guard let av = currentUser?.usuarioAV?.object(at: indexPath.row) as? AgudezaVisual, let ccOD = av.ccOjoDer as? Float, let ccOI = av.ccOjoIzq as? Float, let scOD = av.scOjoIzq as? Float, let scOI = av.scOjoDer as? Float, let date = av.fecha as Date? else {
                 return cell!
             }
             
@@ -96,7 +96,7 @@ class EstadisticasViewController: UIViewController, UITableViewDelegate, UITable
             
             statsAV.append(av)
             
-            cell?.textLabel?.text = "With Compensation: Right eye: \(ccOD)\t Left eye: \(ccOI)\t\t\t Without Compensation: Right eye: \(scOD)\t Left eye: \(scOI)"
+            cell?.textLabel?.text = "With Compensation: OD: \(ccOD)\t OI: \(ccOI)\t\t\t Without Compensation: OD: \(scOD)\t OI: \(scOI)"
             cell?.detailTextLabel?.text = dateFormatter.string(from: date)
             
         }
@@ -119,17 +119,21 @@ class EstadisticasViewController: UIViewController, UITableViewDelegate, UITable
             } else if editingStyle == .insert {
                 // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
             }
+        } else if tableView == self.avTableView{
+            if editingStyle == .delete {
+                let managedContext = (UIApplication.shared.delegate as? AppDelegate)!.persistentContainer.viewContext
+                managedContext.delete(statsAV[indexPath.row])
+                statsAV.remove(at: indexPath.row)
+                do {
+                    try managedContext.save()
+                } catch let error as NSError {
+                    print("Error al borrar el AV: \(error), \(error.userInfo)")
+                }
+                avTableView.reloadData()
+            } else if editingStyle == .insert {
+                // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
+            }
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
