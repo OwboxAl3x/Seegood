@@ -15,6 +15,11 @@
         <attribute name="tiempo" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="ejerciciosUsuario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuarios" inverseName="usuarioEjercicios" inverseEntity="Usuarios" syncable="YES"/>
     </entity>
+    <entity name="Evento" representedClassName=".Evento" syncable="YES">
+        <attribute name="fecha" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="nombreEvento" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="eventoUsuario" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Usuarios" inverseName="usuarioEvento" inverseEntity="Usuarios" syncable="YES"/>
+    </entity>
     <entity name="Usuarios" representedClassName=".Usuarios" syncable="YES">
         <attribute name="cilindroOjoDer" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="cilindroOjoIzq" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
@@ -29,10 +34,12 @@
         <attribute name="telefono" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="usuarioAV" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="AgudezaVisual" inverseName="avUsuario" inverseEntity="AgudezaVisual" syncable="YES"/>
         <relationship name="usuarioEjercicios" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Ejercicios" inverseName="ejerciciosUsuario" inverseEntity="Ejercicios" syncable="YES"/>
+        <relationship name="usuarioEvento" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Evento" inverseName="eventoUsuario" inverseEntity="Evento" syncable="YES"/>
     </entity>
     <elements>
         <element name="AgudezaVisual" positionX="-461" positionY="-27" width="128" height="135"/>
         <element name="Ejercicios" positionX="-20" positionY="-27" width="128" height="120"/>
-        <element name="Usuarios" positionX="-243" positionY="-27" width="126" height="240"/>
+        <element name="Evento" positionX="-252" positionY="81" width="128" height="90"/>
+        <element name="Usuarios" positionX="-243" positionY="-27" width="126" height="255"/>
     </elements>
 </model>
