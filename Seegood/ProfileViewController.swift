@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Photos
 import Charts
+import SVProgressHUD
 
 class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -90,10 +91,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             SCODlabel.endEditing(true)
             SCOIlabel.endEditing(true)
             
-            let alertVC = UIAlertController(title: "Message", message: "First AV already entered", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertVC.addAction(action)
-            present(alertVC, animated: true, completion: nil)
+            SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
+            SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+            SVProgressHUD.showError(withStatus: "First AV already entered")
             
         }
         
@@ -140,19 +140,17 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 
             } else {
                 
-                let alertVC = UIAlertController(title: "Message", message: "Enter a data before updating", preferredStyle: .alert)
-                let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alertVC.addAction(action)
-                present(alertVC, animated: true, completion: nil)
+                SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
+                SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+                SVProgressHUD.showError(withStatus: "Enter a data before updating")
                 
             }
         
         } else {
             
-            let alertVC = UIAlertController(title: "Message", message: "Enter a data before updating", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertVC.addAction(action)
-            present(alertVC, animated: true, completion: nil)
+            SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
+            SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+            SVProgressHUD.showError(withStatus: "Enter a data before updating")
             
         }
         
@@ -216,10 +214,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         do {
             try managedContext.save()
             
-            let alertVC = UIAlertController(title: "Message", message: "Data saved", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertVC.addAction(action)
-            present(alertVC, animated: true, completion: nil)
+            SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
+            SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+            SVProgressHUD.showSuccess(withStatus: "Data Saved")
             
         } catch let error as NSError {
             print("No se pudo añadir el nuevo usuario, error: \(error), \(error.userInfo)")
@@ -248,10 +245,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             
         } else {
             
-            let alertVC = UIAlertController(title: "Message", message: "We do not have permission to access the roll", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertVC.addAction(action)
-            present(alertVC, animated: true, completion: nil)
+            SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
+            SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+            SVProgressHUD.showError(withStatus: "We do not have permission to access the camera")
             
         }
         
@@ -277,10 +273,9 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
             
         } else {
         
-            let alertVC = UIAlertController(title: "Message", message: "We do not have permission to access the roll", preferredStyle: .alert)
-            let action = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alertVC.addAction(action)
-            present(alertVC, animated: true, completion: nil)
+            SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
+            SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+            SVProgressHUD.showError(withStatus: "We do not have permission to access the roll")
             
         }
         

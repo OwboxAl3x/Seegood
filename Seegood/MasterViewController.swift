@@ -72,8 +72,6 @@ class MasterViewController: UITableViewController {
                 SVProgressHUD.setMinimumDismissTimeInterval(1.5)
                 SVProgressHUD.showError(withStatus: "Incorrect Fields")
                 
-                //self.present(alertNewUser, animated: true, completion: nil)
-                
             }
         }))
         
