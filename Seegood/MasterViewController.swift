@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import SVProgressHUD
 
 class MasterViewController: UITableViewController {
 
@@ -58,17 +59,21 @@ class MasterViewController: UITableViewController {
             let fNameField = alertNewUser.textFields![0] as UITextField
             let lNameField = alertNewUser.textFields![1] as UITextField
             
-            if fNameField.text != "", lNameField.text != "" {
+            let nombreSinEspacio = fNameField.text?.trimmingCharacters(in: .whitespaces)
+            let apellidosSinEspacio = fNameField.text?.trimmingCharacters(in: .whitespaces)
+            
+            if nombreSinEspacio != "", apellidosSinEspacio != "" {
                 self.nombreUsuario = fNameField.text! + " " + lNameField.text!
                 self.insertNewRow(nameUser: self.nombreUsuario!)
                 self.tableView.reloadData()
             } else {
-                let errorAlert = UIAlertController(title: "Error", message: "Please input both a first AND last name", preferredStyle: .alert)
-                errorAlert.addAction(UIAlertAction(title: "OK", style: .cancel, handler: {
-                    alert -> Void in
-                    self.present(alertNewUser, animated: true, completion: nil)
-                }))
-                self.present(errorAlert, animated: true, completion: nil)
+                
+                SVProgressHUD.setDefaultMaskType(SVProgressHUDMaskType.black)
+                SVProgressHUD.setMinimumDismissTimeInterval(1.5)
+                SVProgressHUD.showError(withStatus: "Incorrect Fields")
+                
+                //self.present(alertNewUser, animated: true, completion: nil)
+                
             }
         }))
         

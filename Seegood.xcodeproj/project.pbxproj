@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1A87138E791D09BC868DA993 /* Pods_Seegood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A2CFFEC9132626DDF79DD5C /* Pods_Seegood.framework */; };
 		9213502E2095E6E500B0682F /* Seegood.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9213502C2095E6E500B0682F /* Seegood.xcdatamodeld */; };
+		922CBECE20C20BD500B24AF1 /* SVProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 922CBECD20C20BD500B24AF1 /* SVProgressHUD.framework */; };
+		922CBECF20C20BD500B24AF1 /* SVProgressHUD.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 922CBECD20C20BD500B24AF1 /* SVProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		92377E3A20A1F83C00578248 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92377E3920A1F83C00578248 /* TaskViewController.swift */; };
 		9242499F208E1D9200940ED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242499E208E1D9200940ED6 /* AppDelegate.swift */; };
 		924249A1208E1D9200940ED6 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 924249A0208E1D9200940ED6 /* MasterViewController.swift */; };
@@ -38,6 +40,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				922CBECF20C20BD500B24AF1 /* SVProgressHUD.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -47,6 +50,7 @@
 /* Begin PBXFileReference section */
 		3A2CFFEC9132626DDF79DD5C /* Pods_Seegood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Seegood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9213502D2095E6E500B0682F /* Users.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Users.xcdatamodel; sourceTree = "<group>"; };
+		922CBECD20C20BD500B24AF1 /* SVProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SVProgressHUD.framework; path = Carthage/Build/iOS/SVProgressHUD.framework; sourceTree = "<group>"; };
 		92377E3920A1F83C00578248 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 		9242499B208E1D9200940ED6 /* Seegood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Seegood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9242499E208E1D9200940ED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				922CBECE20C20BD500B24AF1 /* SVProgressHUD.framework in Frameworks */,
 				1A87138E791D09BC868DA993 /* Pods_Seegood.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +93,7 @@
 		92424992208E1D9200940ED6 = {
 			isa = PBXGroup;
 			children = (
+				922CBECD20C20BD500B24AF1 /* SVProgressHUD.framework */,
 				92A8DD1E20A2618B00DA4714 /* Evento+CoreDataClass.swift */,
 				92A8DD1F20A2618B00DA4714 /* Evento+CoreDataProperties.swift */,
 				92A8DD2020A2618B00DA4714 /* Ejercicios+CoreDataClass.swift */,
@@ -429,6 +435,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DQNFBYPA5D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Seegood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -449,6 +459,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DQNFBYPA5D;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Seegood/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
